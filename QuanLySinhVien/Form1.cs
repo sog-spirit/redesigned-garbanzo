@@ -51,7 +51,9 @@ namespace QuanLySinhVien
             comboBox_SortOrder.Items.AddRange(new ComboBoxItem[]
             {
                 new ComboBoxItem{Text = "Sap xep theo ten tu A-Z", Value = 0},
-                new ComboBoxItem{Text = "Sap xep theo ten tu Z-A", Value = 1}
+                new ComboBoxItem{Text = "Sap xep theo ten tu Z-A", Value = 1},
+                new ComboBoxItem{Text = "Sap xep tang dan theo ngay sinh", Value = 2},
+                new ComboBoxItem{Text = "Sap xep giam dan theo ngay sinh", Value = 3}
             });
             comboBox_SortOrder.SelectedIndex = 0;
         }
@@ -103,10 +105,20 @@ namespace QuanLySinhVien
             switch(selectionIndex)
             {
                 case 0:
-                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(StudentView.StudentNameASC, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
+                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(
+                        StudentView.StudentNameASC, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
                     break;
                 case 1:
-                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(StudentView.StudentNameDES, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
+                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(
+                        StudentView.StudentNameDES, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
+                    break;
+                case 2:
+                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(
+                        StudentView.DOB_ASC, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
+                    break;
+                case 3:
+                    dataGridView1.DataSource = BusinessLogicLayer.Instance.SortStudentViews(
+                        StudentView.DOB_DES, textBox_NameInput.Text, ((ComboBoxItem)comboBox_ListOfClass.SelectedItem).Value);
                     break;
                 default:
                     break;

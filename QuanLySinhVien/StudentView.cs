@@ -25,5 +25,17 @@ namespace QuanLySinhVien
                 return true;
             return false;
         }
+        public static bool DOB_ASC(StudentView a, StudentView b)
+        {
+            if (DateTime.Compare(a.DateOfBirth, b.DateOfBirth) < 0)
+                return false;
+            return true;
+        }
+        public static bool DOB_DES(StudentView a, StudentView b)
+        {
+            if (DateTime.Compare(a.DateOfBirth, b.DateOfBirth) >= 0)
+                return true;
+            return false;
+        }
     }
 }
