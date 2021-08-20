@@ -124,7 +124,12 @@ namespace QuanLySinhVien
                     break;
             }
         }
-
+        private void button_ManageClass_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            RefreshDataGrid();
+        }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -134,5 +139,6 @@ namespace QuanLySinhVien
         {
             RefreshDataGrid();
         }
+
     }
 }

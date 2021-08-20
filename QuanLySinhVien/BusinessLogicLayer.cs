@@ -69,5 +69,15 @@ namespace QuanLySinhVien
             }
             return studentViews;
         }
+        public bool ClassIsExist(int classValue, string className)
+        {
+            List<Class> classes = DataAccessLayer.Instance.GetClasses();
+            foreach (Class @class in classes)
+            {
+                if (@class.ClassName.ToLower().Equals(className) || @class.ClassID == classValue)
+                    return true;
+            }
+            return false;
+        }
     }
 }

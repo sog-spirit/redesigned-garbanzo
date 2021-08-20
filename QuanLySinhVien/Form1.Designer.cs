@@ -40,6 +40,7 @@ namespace QuanLySinhVien
             this.comboBox_SortOrder = new System.Windows.Forms.ComboBox();
             this.comboBox_ListOfClass = new System.Windows.Forms.ComboBox();
             this.textBox_NameInput = new System.Windows.Forms.TextBox();
+            this.button_ManageClass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,11 +145,22 @@ namespace QuanLySinhVien
             this.textBox_NameInput.Size = new System.Drawing.Size(236, 22);
             this.textBox_NameInput.TabIndex = 22;
             // 
+            // button_ManageClass
+            // 
+            this.button_ManageClass.Location = new System.Drawing.Point(210, 12);
+            this.button_ManageClass.Name = "button_ManageClass";
+            this.button_ManageClass.Size = new System.Drawing.Size(115, 23);
+            this.button_ManageClass.TabIndex = 33;
+            this.button_ManageClass.Text = "Manage Class";
+            this.button_ManageClass.UseVisualStyleBackColor = true;
+            this.button_ManageClass.Click += new System.EventHandler(this.button_ManageClass_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_ManageClass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Sort);
@@ -183,6 +195,7 @@ namespace QuanLySinhVien
         private System.Windows.Forms.ComboBox comboBox_SortOrder;
         private System.Windows.Forms.ComboBox comboBox_ListOfClass;
         private System.Windows.Forms.TextBox textBox_NameInput;
+        private System.Windows.Forms.Button button_ManageClass;
     }
 }
 
