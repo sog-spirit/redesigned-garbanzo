@@ -96,6 +96,7 @@ namespace QuanLySinhVien
             {
                 string studentID = dataGridView1.CurrentRow.Cells["StudentID"].Value.ToString();
                 BusinessLogicLayer.Instance.DeleteStudent(studentID);
+                MessageBox.Show("Da xoa thanh cong", "Chu y", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshDataGrid();
             }
         }

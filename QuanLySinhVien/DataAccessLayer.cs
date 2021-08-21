@@ -131,5 +131,16 @@ namespace QuanLySinhVien
             programContext.classes.Add(@class);
             programContext.SaveChanges();
         }
+        public void DeleteClass(int classID)
+        {
+            var query = from _class in programContext.classes
+                        where _class.ClassID == classID
+                        select _class;
+            foreach (Class @class in query)
+            {
+                programContext.classes.Remove(@class);
+            }
+            programContext.SaveChanges();
+        }
     }
 }

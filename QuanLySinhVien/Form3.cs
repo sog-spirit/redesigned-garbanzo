@@ -32,7 +32,13 @@ namespace QuanLySinhVien
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
-
+            if(dataGridView1.CurrentRow != null)
+            {
+                int classID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ClassID"].Value);
+                BusinessLogicLayer.Instance.DeleteClass(classID);
+                MessageBox.Show("Da xoa thanh cong", "Chu y", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshDataGrid();
+            }
         }
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {

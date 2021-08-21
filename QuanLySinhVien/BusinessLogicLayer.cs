@@ -83,5 +83,9 @@ namespace QuanLySinhVien
         {
             DataAccessLayer.Instance.AddClass(className, classValue);
         }
+        public void DeleteClass(int classID)
+        {
+            DataAccessLayer.Instance.DeleteClass(classID);
+        }
     }
 }
