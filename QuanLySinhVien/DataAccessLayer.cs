@@ -121,5 +121,15 @@ namespace QuanLySinhVien
             }
             programContext.SaveChanges();
         }
+        public void AddClass(string className, int classValue)
+        {
+            Class @class = new Class()
+            {
+                ClassID = classValue,
+                ClassName = className
+            };
+            programContext.classes.Add(@class);
+            programContext.SaveChanges();
+        }
     }
 }

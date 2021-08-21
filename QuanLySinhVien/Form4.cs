@@ -29,7 +29,8 @@ namespace QuanLySinhVien
                 MessageBox.Show("Lop da ton tai. Ten lop va ma lop phai khong trung lap danh sach!", "Chu y", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
+            BusinessLogicLayer.Instance.AddClass(textBox_ClassNameInput.Text, Convert.ToInt32(textBox_ClassIDInput.Text));
+            this.Dispose();
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)

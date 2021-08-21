@@ -79,5 +79,9 @@ namespace QuanLySinhVien
             }
             return false;
         }
+        public void AddClass(string className, int classValue)
+        {
+            DataAccessLayer.Instance.AddClass(className, classValue);
+        }
     }
 }

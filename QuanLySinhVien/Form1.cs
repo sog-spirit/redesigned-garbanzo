@@ -33,6 +33,7 @@ namespace QuanLySinhVien
         }
         private void LoadComboBox()
         {
+            comboBox_ListOfClass.Items.Clear();
             comboBox_ListOfClass.Items.Add(new ComboBoxItem()
             {
                 Text = "Tat ca",
@@ -138,6 +139,7 @@ namespace QuanLySinhVien
         private void Form1_Activated(object sender, EventArgs e)
         {
             RefreshDataGrid();
+            LoadComboBox();
         }
 
     }
