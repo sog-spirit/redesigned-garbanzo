@@ -16,7 +16,7 @@ namespace QuanLySinhVien
         {
             InitializeComponent();
         }
-
+        //Chống tạo lớp trùng lặp, chống xóa lớp khi học sinh trong lớp đấy chưa xóa
         private void button_OK_Click(object sender, EventArgs e)
         {
             if (textBox_ClassIDInput.Text == "" || textBox_ClassNameInput.Text == "")
@@ -41,7 +41,7 @@ namespace QuanLySinhVien
         {
             this.Dispose();
         }
-
+        //để textbox chỉ cho phép nhập số nguyên dương
         private void textBox_ClassIDInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)
